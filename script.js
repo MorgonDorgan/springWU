@@ -5,8 +5,12 @@ input.addEventListener("input", async () => {
 
   const query = input.value;
 
-  const response = await fetch(`/search?q=${query}`);
+  if (!query) {
+    resultsDiv.innerHTML = "";
+    return;
+  }
 
+  const response = await fetch(`/search?q=${query}`);
   const results = await response.json();
 
   resultsDiv.innerHTML = "";

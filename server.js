@@ -14,7 +14,7 @@ const data = [
 
 app.get("/search", (req, res) => {
 
-  const query = req.query.q.toLowerCase();
+  const query = (req.query.q || "").toLowerCase();
 
   const results = data.filter(item =>
     item.toLowerCase().includes(query)
