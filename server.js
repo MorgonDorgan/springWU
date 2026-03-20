@@ -16,9 +16,9 @@ app.get("/search", (req, res) => {
 
   const query = (req.query.q || "").toLowerCase();
 
-  const results = data.filter(item =>
-    item.toLowerCase().includes(query)
-  );
+  const results = data
+    .filter(item => item.toLowerCase().includes(query))
+    .sort((a, b) => a.length - b.length);
 
   res.json(results);
 
