@@ -1,0 +1,4 @@
+Passwrod for cluster: 9DGxSaZun4pd1ecq
+Username for cluster: Morgonpigg
+
+mongodb+srv://Morgonpigg:9DGxSaZun4pd1ecq@springwu.0mityag.mongodb.net/?appName=SpringWU

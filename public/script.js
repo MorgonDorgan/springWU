@@ -4,7 +4,7 @@ const resultsDiv = document.getElementById("results");
 let selectedIndex = -1;
 let currentResults = [];
 
-// debounce (prevents too many requests)
+
 let timeout;
 
 input.addEventListener("input", () => {
@@ -28,7 +28,7 @@ input.addEventListener("input", () => {
   }, 300);
 });
 
-// render results
+
 function renderResults(results, query) {
   resultsDiv.innerHTML = "";
 
@@ -41,7 +41,6 @@ function renderResults(results, query) {
     const div = document.createElement("div");
     div.classList.add("result-item");
 
-    // highlight match
     const regex = new RegExp(`(${query})`, "gi");
     div.innerHTML = item.replace(regex, `<span class="highlight">$1</span>`);
 
@@ -53,7 +52,6 @@ function renderResults(results, query) {
   });
 }
 
-// keyboard navigation
 input.addEventListener("keydown", (e) => {
   const items = document.querySelectorAll(".result-item");
 
