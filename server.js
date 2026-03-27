@@ -5,8 +5,8 @@ const app = express();
 app.use(express.static("public"));
 
 mongoose.connect("mongodb+srv://Morgonpigg:9DGxSaZun4pd1ecq@springwu.0mityag.mongodb.net/SearchDB?retryWrites=true&w=majority")
-  .then(() => console.log("MongoDB connected"))
-  .catch(err => console.log(err));
+  .then(() => console.log("✅ MongoDB connected"))
+  .catch(err => console.log("ERROR:", err));
 
   const ItemSchema = new mongoose.Schema({
     name: String
@@ -14,35 +14,29 @@ mongoose.connect("mongodb+srv://Morgonpigg:9DGxSaZun4pd1ecq@springwu.0mityag.mon
   
   const Item = mongoose.model("Item", ItemSchema);
 
-const data = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Node.js",
-  "Express",
-  "React"
-];
-
-app.get("/search", (req, res) => {
-
+app.get("/search", async (req, res) => {
   const query = (req.query.q || "").toLowerCase();
 
-  const results = data
-    .filter(item => item.toLowerCase().includes(query))
-    .sort((a, b) => a.length - b.length);
+  const results = await Item.find({
+    name: { $regex: query, $options: "i" } 
+  }).sort({ name: 1 });
 
-  res.json(results);
-
+  res.json(results.map(item => item.name));
 });
 
 app.get("/add", async (req, res) => {
-  await Item.create({ name: "HTML" });
-  await Item.create({ name: "CSS" });
-  await Item.create({ name: "JavaScript" });
-  await Item.create({ name: "Node.js" });
-  await Item.create({ name: "Express" });
 
-  res.send("Data added");
+  const name = req.query.name;
+
+  if (!name) {
+    return res.send("Use /add?name=HTML");
+  }
+
+  const newItem = await Item.create({ name });
+
+  console.log("Saved to DB:", newItem);
+
+  res.send(`Added: ${name}`);
 });
 
 app.listen(3000, () => {
