@@ -2,7 +2,7 @@
     display: grid;
     height: 149vh;
     width: auto;
-    background-color: aquamarine;
+    background-color: gray;
     grid-template-areas: 
     "b h l"
     "a a a"
@@ -10,17 +10,19 @@
 }
 
 #headline{
-    background-color: rebeccapurple;
+    background-color: black;
     grid-area: h;
-    
+    height: 20vh;
 }
 
 #back{
-    background-color: green;
+    background-color: black;
     grid-area: b;
+    height: 20vh;
 }
 
 #love{
-    background-color: red;
+    background-color: black;
     grid-area: l;
+    height: 20vh;
 }
