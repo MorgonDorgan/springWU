@@ -1,0 +1,26 @@
+#wrapper{
+    display: grid;
+    height: 149vh;
+    width: auto;
+    background-color: aquamarine;
+    grid-template-areas: 
+    "b h l"
+    "a a a"
+    "a a a";
+}
+
+#headline{
+    background-color: rebeccapurple;
+    grid-area: h;
+    
+}
+
+#back{
+    background-color: green;
+    grid-area: b;
+}
+
+#love{
+    background-color: red;
+    grid-area: l;
+}
