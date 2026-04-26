@@ -157,14 +157,35 @@
     grid-area: u;
 }
 
+
+/* som jag sa någon annanstans i denna dåliga websida så suger grid eller så gör jag det jag vet inte längre i alla fall så måste grid bort från min telefon sida */
 @media (max-width: 600px) {
-    #topbar {
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        text-align: center;
+#wrapper {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+        padding: 1rem;
+        overflow-x: hidden;
     }
 
-    #back, #love {
-        justify-self: center;
+    #topbar {
+        flex-direction: column;
+        height: auto;
+        gap: 0.8rem;
+        padding: 1rem;
     }
+
+    #headline {
+        position: static;
+        transform: none;
+        font-size: 1.8rem;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+
 }
+
