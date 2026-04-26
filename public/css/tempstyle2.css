@@ -2,7 +2,7 @@
     display: grid;
     position: relative;
     height: 149vh;
-    width: 191vh;
+    max-width: 100%;
     background:
      url("/img/Warframe-Gauss-Featured.avif"),
     linear-gradient(135deg, #0b0f1a, #1a1f2e);
@@ -49,6 +49,7 @@
     0 0 10px rgba(0, 229, 255, 0.2),
     inset 0 0 10px rgba(0, 229, 255, 0.1);
     color: #bff8ff;
+    position: relative;
 }
 
 #back{
@@ -56,7 +57,9 @@
 }
 
 #headline {
-    justify-self: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #love {
@@ -146,4 +149,16 @@
 
 #utrymme{
     grid-area: u;
+}
+
+@media (max-width: 600px) {
+    #topbar {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    #back, #love {
+        justify-self: center;
+    }
 }
