@@ -2,12 +2,18 @@
     display: grid;
     position: relative;
     height: 149vh;
-    width: auto;
+    width: 100%;
     background: linear-gradient(135deg, #0b0f1a, #1a1f2e);
     grid-template-areas: 
     "h h h"
-    "a a a"
-    "a a a";
+    "u u u"
+    "i1 s i2"
+    "i1 s i2";
+    padding: 2%;
+    min-width: 0;
+    align-items: stretch;
+    grid-template-rows: auto 100px 1fr 1fr;
+    overflow: hidden;
 }
 
 #topbar{
@@ -40,7 +46,7 @@
 #tillbaka_knapp {
     position: absolute;
     left: 4rem;
-    top: 3%;
+    top: 5%;
 
     background: linear-gradient(145deg, #0b0f1a, #121826);
     border: 1px solid rgba(107, 114, 128, 0.4);
@@ -67,8 +73,8 @@
 
 #rule_knapp {
     position: absolute; 
-    left: 95rem; 
-    top: 3%;
+    left: 100rem; 
+    top: 5%;
 
     background: linear-gradient(145deg, #0b0f1a, #121826);
     border: 1px solid rgba(107, 114, 128, 0.4);
@@ -90,4 +96,41 @@
     box-shadow:
         0 0 20px rgba(0, 229, 255, 0.6);
     border-color: #00e5ff;
+}
+
+#information1{
+    grid-area: i1;
+    background-color: #1a1f2e;
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+#information2{
+    grid-area: i2;
+    background-color: #1a1f2e;
+    color: #cbd5e1;
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.title {
+    text-align: center;
+}
+
+#information1, #information2 {
+    min-width: 0;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    width: 100%;
+    height: 100%;
+    border-radius: 7%;
+    padding: 5%;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+#utrymme{
+    grid-area: u;
 }
