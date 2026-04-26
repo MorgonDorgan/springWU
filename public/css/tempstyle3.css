@@ -27,8 +27,16 @@ body {
     margin-bottom: 2rem;
     text-align: center;
     margin-top: 0;
+    text-decoration: none;
+    display: block;
 }
 
+.title:hover {
+    color: #3b82f6;
+    text-shadow: 0 0 15px #00e5ff;
+    transform: scale(1.02);
+    transition: 0.2s;
+}
 .panel {
     width: min(800px, 95%);
     background: #1a1f2e;
