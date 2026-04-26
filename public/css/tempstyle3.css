@@ -1,0 +1,31 @@
+/* jag visste inte man kan använda body som en typ av wrapper tills nu så det är la dags att börja med det */
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0b0f1a, #1a1f2e);
+    color: #cbd5e1;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: clamp(3rem, 6vw, 6rem);
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: #00e5ff;
+    text-shadow: 0 0 10px #00e5ff, 0 0 25px #3b82f6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+
