@@ -10,10 +10,15 @@
 }
 
 #headline{
-    background-color: black;
+    background-color: gray;
     grid-area: h;
     height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
+
+
 
 #back{
     background-color: black;
@@ -28,6 +33,7 @@
     height: 20vh;
 }
 
+/* Taget från tidigare project */
 #tillbaka_knapp {
     position: absolute;
     left: 1rem;
@@ -48,5 +54,4 @@
 #tillbaka_knapp:hover {
     background-color: #e8e0d7;
 }
-
-
+/* Taget från tidigare project */
