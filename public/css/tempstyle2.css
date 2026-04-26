@@ -2,65 +2,80 @@
     display: grid;
     height: 149vh;
     width: auto;
-    background-color: gray;
+    background: linear-gradient(135deg, #0b0f1a, #1a1f2e);
     grid-template-areas: 
     "b h l"
     "a a a"
     "a a a";
 }
 
-#headline{
-    background-color: gray;
+#topbar{
+    background: linear-gradient(145deg, #0b0f1a, #121826);
     grid-area: h;
     height: 20vh;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     font-size: 2.5rem;
-    letter-spacing: 4px;
+    letter-spacing: 6px;
     text-transform: uppercase;
     font-weight: 600;
     padding: 10px;
     gap: 10px;
     border-radius: 30px;
-    border: 10px;
-    border: solid;
+   border: 2px solid rgba(107, 114, 128, 0.3);
+    font-size: 3rem;
+    color: #121826;
+    text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 25px #00e5ff;
+    box-shadow:
+    0 0 10px rgba(0, 229, 255, 0.2),
+    inset 0 0 10px rgba(0, 229, 255, 0.1);
+    color: #cbd5e1;
 }
 
 
 
 #back{
-    background-color: black;
-    grid-area: b;
-    height: 20vh;
-    
+    grid-area: b;    
 }
 
 #love{
-    background-color: black;
     grid-area: l;
+}
+
+#back, #love {
+    background: linear-gradient(145deg, #121826, #1a1f2e);
     height: 20vh;
 }
 
-/* Taget från tidigare project */
+/* Taget från tidigare project väldigt modifiered knappast samma*/
 #tillbaka_knapp {
     position: absolute;
-    left: 1rem;
-    top: 50%;
-    transform: translateY(-500%);
+    left: 4rem;
+    top: 6%;
 
-    background-color: white;
-    border: 0.15cm solid gray;
-    border-radius: 0.3cm;
-    padding: 0.3cm 0.7cm;
+    background: linear-gradient(145deg, #0b0f1a, #121826);
+    border: 1px solid rgba(107, 114, 128, 0.4);
+    border-radius: 12px;
+    padding: 1.5rem 2.5rem;
 
-    color: black;
     text-decoration: none;
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1.8rem;
+    color: #cbd5e1;
+    text-shadow:
+    0 0 5px #00e5ff,
+    0 0 10px #00e5ff,
+    0 0 25px #00e5ff;
 }
 
 #tillbaka_knapp:hover {
-    background-color: #e8e0d7;
+    transform: translateY(-2px);
+    box-shadow:
+        0 0 20px rgba(0, 229, 255, 0.6);
+    border-color: #00e5ff;
 }
-/* Taget från tidigare project */
+/* Taget från tidigare project väldigt modifiered knappast samma*/
