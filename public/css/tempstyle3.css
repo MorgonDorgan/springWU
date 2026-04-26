@@ -10,7 +10,7 @@ body {
     margin: 0;
 }
 
-#wrapper {
+.wrapper {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -30,6 +30,7 @@ body {
     text-decoration: none;
     display: block;
 }
+/* så att göra block gör så att <a> fungerar igen */
 
 .title:hover {
     color: #3b82f6;
@@ -63,7 +64,6 @@ li {
 }
 
 .footer {
-    margin-top: auto;
     opacity: 0.7;
     font-size: 0.9rem;
 }
