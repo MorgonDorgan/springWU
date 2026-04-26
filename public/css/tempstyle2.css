@@ -175,12 +175,20 @@
         height: auto;
         gap: 0.8rem;
         padding: 1rem;
+        border-radius: 20px;
     }
 
     #headline {
         position: static;
         transform: none;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        letter-spacing: 2px;
+    }
+
+    #tillbaka_knapp,
+    #rule_knapp {
+        width: 100%;
+        text-align: center;
     }
 
     body {
@@ -195,6 +203,7 @@
         line-height: 1.5;
         background: rgba(26, 31, 46, 0.6);
         backdrop-filter: blur(4px);
+        text-align: center;
     }
 
 
