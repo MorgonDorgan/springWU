@@ -2,8 +2,15 @@
     display: grid;
     position: relative;
     height: 149vh;
-    width: 100%;
-    background: linear-gradient(135deg, #0b0f1a, #1a1f2e);
+    width: 191vh;
+    background:
+     url("/img/Warframe-Gauss-Featured.avif"),
+    linear-gradient(135deg, #0b0f1a, #1a1f2e);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-blend-mode: overlay;
+    filter: brightness(0.9) contrast(1.1);
     grid-template-areas: 
     "h h h"
     "u u u"
