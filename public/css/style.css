@@ -133,7 +133,7 @@ body {
 .search-input{
     font-size: 16px;
     font-family: 'Lexend', sans-serif;
-    color:#333333;
+    color: #cbd5e1;
     margin-left: var(--padding);
     outline: none;
     border: none;
@@ -142,11 +142,12 @@ body {
 }
 
 .search:focus-within {
-    box-shadow: 0 0 20px rgba(0, 229, 255, 0.4);
+    box-shadow: 0 0 18px rgba(0, 229, 255, 0.35);
+    border-color: #00e5ff;
 }
 
 .search-input::placeholder, .search-icon {
-    color: rgba(0, 0, 0, 0.25);
+    color: rgba(203, 213, 225, 0.4);
 }
 
 .results {
