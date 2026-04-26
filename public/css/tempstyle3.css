@@ -1,5 +1,6 @@
 /* jag visste inte man kan använda body som en typ av wrapper tills nu så det är la dags att börja med det */
 /* well detta blir bra som en endast flex sida ig */
+/* jag hade skrivit detta i logboken men detta är mer passande. Jag basically bara tog allt jag använde för landing page och gjorde det istället med bara flex och det gick jävligt fort måsta jag säga att använda grid är nästan krångligare måste jag säga då all skriker ohc gapar för full hals*/
 
 body {
     font-family: Arial, sans-serif;
